@@ -11,17 +11,17 @@
 
 3. KodePosku 
 
-    A single csv file that contain postalcode, province, district, subdistrict, and kode_kemendagri. Please look at the [documentation](https://kodeposku.com/dokumentasi)
+    A single csv file that contain postalcode, province, district, regency, and kode_kemendagri. Please look at the [documentation](https://kodeposku.com/dokumentasi)
 
 4. Coll-J 
 
-    Approximating the latitude and longitude using the mean of borders. Using single csv as a initial data and create separated csv group by province, district, and subdistrict that have general geocode location. Please look at the [github repo](https://github.com/coll-j/indonesia-locations-data)
+    Approximating the latitude and longitude using the mean of borders. Using single csv as a initial data and create separated csv group by province, district, and regency that have general geocode location. Please look at the [github repo](https://github.com/coll-j/indonesia-locations-data)
 
 
 ## Order
 1. Run `main.ipynb` to get the latest pair of administratif location of Indonesian from **Badan Pusat Statistik**
 2. Run `geocode-base-aa.ipynb` to get the geolocation point of every administratif location of Indonesian. In short, I only left join the [BPS](https://sig.bps.go.id/bridging-kode/index) data and data from [ArrayAccess](https://github.com/ArrayAccess/Indonesia-Postal-And-Area)
-3. Because there're several data that still have unknown point of location. We use data from [coll-j](https://github.com/coll-j/indonesia-locations-data) to fill the missing value. especially for subdistrict locations data. Look at the `geocode-base-coll.ipynb` file
+3. Because there're several data that still have unknown point of location. We use data from [coll-j](https://github.com/coll-j/indonesia-locations-data) to fill the missing value. especially for regency locations data. Look at the `geocode-base-coll.ipynb` file
 4. Another data that i collect are postal code. Look at the `postal-code.ipynb`
 5. `final.ipynb` created just to choose each final files from the output folders and put it on final folders.
 
